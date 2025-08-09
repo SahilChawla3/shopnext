@@ -79,7 +79,7 @@ import { FilterOptions } from '../../models/product.model';
             <button (click)="removeFilter('category')" class="remove-filter">×</button>
           </span>
           <span *ngIf="filters.minPrice > 0 || filters.maxPrice < 10000" class="filter-tag">
-            ${{ filters.minPrice }} - ${{ filters.maxPrice }}
+            $ {{ filters.minPrice }} - $ {{ filters.maxPrice }}
             <button (click)="removeFilter('price')" class="remove-filter">×</button>
           </span>
           <span *ngIf="filters.inStock" class="filter-tag">

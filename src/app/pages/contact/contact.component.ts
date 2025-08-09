@@ -45,7 +45,7 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
               </div>
               <div class="method-info">
                 <h3>Email Us</h3>
-                <p>General: info@shopnext.com<br>Support: support@shopnext.com<br>Business: business@shopnext.com</p>
+                <p>General: info&#64;shopnext.com<br>Support: support&#64;shopnext.com<br>Business: business&#64;shopnext.com</p>
               </div>
             </div>
 

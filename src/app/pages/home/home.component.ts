@@ -34,7 +34,7 @@ import { ProductCardComponent } from '../../components/product-card/product-card
 
       <!-- Featured Products Carousel -->
       <section class="featured-section">
-        <app-carousel [products]="featuredProducts$ | async"></app-carousel>
+        <app-carousel *ngIf="featuredProducts$ | async as products" [products]="products"></app-carousel>
       </section>
 
       <!-- Categories Section -->

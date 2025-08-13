@@ -124,20 +124,21 @@ import { FormsModule } from '@angular/forms';
   styles: [`
     .product-details-page {
       min-height: 100vh;
-      background: #f9fafb;
+      background: var(--bg-secondary);
+      transition: background-color 0.3s ease;
     }
 
     .breadcrumb {
-      background: white;
+      background: var(--bg-primary);
       padding: 1rem 0;
-      border-bottom: 1px solid #e5e7eb;
+      border-bottom: 1px solid var(--border-primary);
       margin-bottom: 2rem;
     }
 
     .back-btn {
       background: none;
       border: none;
-      color: #2563eb;
+      color: var(--accent-blue);
       cursor: pointer;
       font-weight: 500;
       padding: 0.5rem 0;
@@ -146,11 +147,11 @@ import { FormsModule } from '@angular/forms';
     }
 
     .back-btn:hover {
-      color: #1d4ed8;
+      color: var(--accent-blue-hover);
     }
 
     .breadcrumb-trail {
-      color: #6b7280;
+      color: var(--text-secondary);
       font-size: 0.9rem;
     }
 
@@ -159,7 +160,7 @@ import { FormsModule } from '@angular/forms';
     }
 
     .current {
-      color: #1f2937;
+      color: var(--text-primary);
       font-weight: 500;
     }
 
@@ -170,10 +171,10 @@ import { FormsModule } from '@angular/forms';
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
-      background: white;
+      background: var(--bg-primary);
       border-radius: 16px;
       padding: 3rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px var(--shadow-light);
     }
 
     .product-image-section {
@@ -213,7 +214,7 @@ import { FormsModule } from '@angular/forms';
     .product-header h1 {
       font-size: 2rem;
       font-weight: bold;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 1rem 0;
     }
 
@@ -229,7 +230,7 @@ import { FormsModule } from '@angular/forms';
     }
 
     .stars span {
-      color: #d1d5db;
+      color: var(--text-tertiary);
       font-size: 1.2rem;
     }
 
@@ -238,7 +239,7 @@ import { FormsModule } from '@angular/forms';
     }
 
     .rating-text {
-      color: #6b7280;
+      color: var(--text-secondary);
       font-size: 0.9rem;
     }
 
@@ -251,12 +252,12 @@ import { FormsModule } from '@angular/forms';
     .current-price {
       font-size: 2rem;
       font-weight: bold;
-      color: #2563eb;
+      color: var(--accent-blue);
     }
 
     .category-badge {
-      background: #f3f4f6;
-      color: #6b7280;
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
       padding: 0.5rem 1rem;
       border-radius: 8px;
       font-size: 0.9rem;
@@ -266,13 +267,13 @@ import { FormsModule } from '@angular/forms';
 
     .product-description h3,
     .product-features h3 {
-      color: #1f2937;
+      color: var(--text-primary);
       font-size: 1.2rem;
       margin: 0 0 1rem 0;
     }
 
     .product-description p {
-      color: #6b7280;
+      color: var(--text-secondary);
       line-height: 1.6;
       margin: 0;
     }
@@ -287,8 +288,8 @@ import { FormsModule } from '@angular/forms';
     }
 
     .feature-item {
-      background: #dbeafe;
-      color: #1e40af;
+      background: var(--accent-blue);
+      color: white;
       padding: 0.5rem 1rem;
       border-radius: 20px;
       font-size: 0.9rem;
@@ -304,30 +305,30 @@ import { FormsModule } from '@angular/forms';
 
     .quantity-section label {
       font-weight: 600;
-      color: #374151;
+      color: var(--text-primary);
     }
 
     .quantity-controls {
       display: flex;
       align-items: center;
-      border: 2px solid #e5e7eb;
+      border: 2px solid var(--border-primary);
       border-radius: 8px;
       overflow: hidden;
     }
 
     .quantity-btn {
-      background: #f9fafb;
+      background: var(--bg-secondary);
       border: none;
       padding: 0.75rem 1rem;
       cursor: pointer;
       font-size: 1.2rem;
       font-weight: bold;
-      color: #374151;
+      color: var(--text-primary);
       transition: background 0.3s ease;
     }
 
     .quantity-btn:hover:not(:disabled) {
-      background: #e5e7eb;
+      background: var(--bg-tertiary);
     }
 
     .quantity-btn:disabled {
@@ -341,6 +342,8 @@ import { FormsModule } from '@angular/forms';
       width: 60px;
       text-align: center;
       font-weight: 600;
+      background: var(--bg-primary);
+      color: var(--text-primary);
     }
 
     .quantity-input:focus {
@@ -369,21 +372,21 @@ import { FormsModule } from '@angular/forms';
     }
 
     .btn-primary {
-      background: #2563eb;
+      background: var(--accent-blue);
       color: white;
     }
 
     .btn-primary:hover:not(:disabled) {
-      background: #1d4ed8;
+      background: var(--accent-blue-hover);
     }
 
     .btn-secondary {
-      background: #f97316;
+      background: var(--accent-orange);
       color: white;
     }
 
     .btn-secondary:hover:not(:disabled) {
-      background: #ea580c;
+      background: var(--accent-orange-hover);
     }
 
     .product-meta {
@@ -391,7 +394,7 @@ import { FormsModule } from '@angular/forms';
       flex-direction: column;
       gap: 1rem;
       padding-top: 2rem;
-      border-top: 1px solid #e5e7eb;
+      border-top: 1px solid var(--border-primary);
     }
 
     .meta-item {
@@ -401,17 +404,17 @@ import { FormsModule } from '@angular/forms';
     }
 
     .in-stock {
-      color: #059669;
+      color: var(--success);
       font-weight: 600;
     }
 
     .out-of-stock {
-      color: #dc2626;
+      color: var(--error);
       font-weight: 600;
     }
 
     .featured-badge {
-      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      background: linear-gradient(135deg, var(--warning), var(--accent-orange));
       color: white;
       padding: 0.25rem 0.75rem;
       border-radius: 12px;
@@ -431,8 +434,8 @@ import { FormsModule } from '@angular/forms';
     .loading-spinner {
       width: 40px;
       height: 40px;
-      border: 4px solid #f3f4f6;
-      border-top: 4px solid #2563eb;
+      border: 4px solid var(--bg-tertiary);
+      border-top: 4px solid var(--accent-blue);
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }

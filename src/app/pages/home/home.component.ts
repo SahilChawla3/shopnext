@@ -110,6 +110,8 @@ import { ProductCardComponent } from '../../components/product-card/product-card
   styles: [`
     .home-container {
       min-height: 100vh;
+      background: var(--bg-primary);
+      transition: background-color 0.3s ease;
     }
 
     .hero-section {
@@ -131,14 +133,14 @@ import { ProductCardComponent } from '../../components/product-card/product-card
     .hero-title {
       font-size: 3rem;
       font-weight: bold;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 1.5rem 0;
       line-height: 1.1;
     }
 
     .hero-subtitle {
       font-size: 1.2rem;
-      color: #6b7280;
+      color: var(--text-secondary);
       margin: 0 0 2rem 0;
       line-height: 1.6;
     }
@@ -175,23 +177,23 @@ import { ProductCardComponent } from '../../components/product-card/product-card
     }
 
     .btn-primary {
-      background: #2563eb;
+      background: var(--accent-blue);
       color: white;
     }
 
     .btn-primary:hover {
-      background: #1d4ed8;
+      background: var(--accent-blue-hover);
       transform: translateY(-2px);
     }
 
     .btn-secondary {
-      background: white;
-      color: #2563eb;
-      border: 2px solid #2563eb;
+      background: var(--bg-primary);
+      color: var(--accent-blue);
+      border: 2px solid var(--accent-blue);
     }
 
     .btn-secondary:hover {
-      background: #2563eb;
+      background: var(--accent-blue);
       color: white;
     }
 
@@ -216,13 +218,13 @@ import { ProductCardComponent } from '../../components/product-card/product-card
     .section-header h2 {
       font-size: 2.5rem;
       font-weight: bold;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 1rem 0;
     }
 
     .section-header p {
       font-size: 1.1rem;
-      color: #6b7280;
+      color: var(--text-secondary);
       margin: 0;
     }
 
@@ -300,10 +302,10 @@ import { ProductCardComponent } from '../../components/product-card/product-card
     }
 
     .feature-card {
-      background: white;
+      background: var(--bg-primary);
       padding: 2rem;
       border-radius: 16px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px var(--shadow-light);
       text-align: center;
       transition: transform 0.3s ease;
     }
@@ -313,19 +315,19 @@ import { ProductCardComponent } from '../../components/product-card/product-card
     }
 
     .feature-icon {
-      color: #2563eb;
+      color: var(--accent-blue);
       margin-bottom: 1.5rem;
     }
 
     .feature-card h3 {
       font-size: 1.25rem;
       font-weight: bold;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 1rem 0;
     }
 
     .feature-card p {
-      color: #6b7280;
+      color: var(--text-secondary);
       margin: 0;
       line-height: 1.6;
     }

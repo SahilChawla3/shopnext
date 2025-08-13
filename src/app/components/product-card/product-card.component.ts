@@ -48,9 +48,9 @@ import { Product } from '../../models/product.model';
   `,
   styles: [`
     .product-card {
-      background: white;
+      background: var(--bg-primary);
       border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px var(--shadow-light);
       overflow: hidden;
       transition: all 0.3s ease;
       position: relative;
@@ -58,7 +58,7 @@ import { Product } from '../../models/product.model';
 
     .product-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 25px var(--shadow-medium);
     }
 
     .product-card.out-of-stock {
@@ -104,11 +104,11 @@ import { Product } from '../../models/product.model';
       font-size: 1.1rem;
       font-weight: bold;
       margin: 0 0 0.5rem 0;
-      color: #1f2937;
+      color: var(--text-primary);
     }
 
     .product-description {
-      color: #6b7280;
+      color: var(--text-secondary);
       font-size: 0.9rem;
       margin: 0 0 1rem 0;
       line-height: 1.4;
@@ -126,7 +126,7 @@ import { Product } from '../../models/product.model';
     }
 
     .stars span {
-      color: #d1d5db;
+      color: var(--text-tertiary);
       font-size: 1rem;
     }
 
@@ -136,7 +136,7 @@ import { Product } from '../../models/product.model';
 
     .rating-text {
       font-size: 0.9rem;
-      color: #6b7280;
+      color: var(--text-secondary);
     }
 
     .product-price {
@@ -149,12 +149,12 @@ import { Product } from '../../models/product.model';
     .price {
       font-size: 1.25rem;
       font-weight: bold;
-      color: #2563eb;
+      color: var(--accent-blue);
     }
 
     .category {
-      background: #f3f4f6;
-      color: #6b7280;
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
       padding: 0.25rem 0.5rem;
       border-radius: 4px;
       font-size: 0.8rem;
@@ -185,21 +185,21 @@ import { Product } from '../../models/product.model';
     }
 
     .btn-primary {
-      background: #2563eb;
+      background: var(--accent-blue);
       color: white;
     }
 
     .btn-primary:hover:not(:disabled) {
-      background: #1d4ed8;
+      background: var(--accent-blue-hover);
     }
 
     .btn-secondary {
-      background: #f3f4f6;
-      color: #374151;
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
     }
 
     .btn-secondary:hover:not(:disabled) {
-      background: #e5e7eb;
+      background: var(--border-primary);
     }
   `]
 })

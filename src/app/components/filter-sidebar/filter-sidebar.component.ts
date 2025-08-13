@@ -92,10 +92,10 @@ import { FilterOptions } from '../../models/product.model';
   `,
   styles: [`
     .filter-sidebar {
-      background: white;
+      background: var(--bg-primary);
       border-radius: 12px;
       padding: 1.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px var(--shadow-light);
       height: fit-content;
       position: sticky;
       top: 6rem;
@@ -112,13 +112,13 @@ import { FilterOptions } from '../../models/product.model';
 
     .filter-header h3 {
       margin: 0;
-      color: #1f2937;
+      color: var(--text-primary);
     }
 
     .clear-filters {
       background: none;
       border: none;
-      color: #2563eb;
+      color: var(--accent-blue);
       cursor: pointer;
       font-size: 0.9rem;
       text-decoration: underline;
@@ -131,23 +131,24 @@ import { FilterOptions } from '../../models/product.model';
     .filter-label {
       display: block;
       font-weight: 600;
-      color: #374151;
+      color: var(--text-primary);
       margin-bottom: 0.5rem;
     }
 
     .filter-select {
       width: 100%;
       padding: 0.75rem;
-      border: 1px solid #d1d5db;
+      border: 1px solid var(--border-secondary);
       border-radius: 6px;
-      background: white;
+      background: var(--bg-primary);
+      color: var(--text-primary);
       font-size: 0.9rem;
     }
 
     .filter-select:focus {
       outline: none;
-      border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
     }
 
     .price-inputs {
@@ -160,14 +161,16 @@ import { FilterOptions } from '../../models/product.model';
     .price-input {
       flex: 1;
       padding: 0.5rem;
-      border: 1px solid #d1d5db;
+      border: 1px solid var(--border-secondary);
       border-radius: 4px;
+      background: var(--bg-primary);
+      color: var(--text-primary);
       font-size: 0.9rem;
     }
 
     .price-input:focus {
       outline: none;
-      border-color: #2563eb;
+      border-color: var(--accent-blue);
     }
 
     .price-range {
@@ -183,7 +186,7 @@ import { FilterOptions } from '../../models/product.model';
       display: flex;
       justify-content: space-between;
       font-size: 0.8rem;
-      color: #6b7280;
+      color: var(--text-secondary);
     }
 
     .checkbox-label {
@@ -191,7 +194,7 @@ import { FilterOptions } from '../../models/product.model';
       align-items: center;
       cursor: pointer;
       font-weight: 500;
-      color: #374151;
+      color: var(--text-primary);
     }
 
     .filter-checkbox {
@@ -206,7 +209,7 @@ import { FilterOptions } from '../../models/product.model';
 
     .filter-summary h4 {
       margin: 0 0 1rem 0;
-      color: #1f2937;
+      color: var(--text-primary);
       font-size: 0.9rem;
     }
 
@@ -217,8 +220,8 @@ import { FilterOptions } from '../../models/product.model';
     }
 
     .filter-tag {
-      background: #dbeafe;
-      color: #1e40af;
+      background: var(--accent-blue);
+      color: white;
       padding: 0.25rem 0.5rem;
       border-radius: 4px;
       font-size: 0.8rem;
@@ -230,7 +233,7 @@ import { FilterOptions } from '../../models/product.model';
     .remove-filter {
       background: none;
       border: none;
-      color: #1e40af;
+      color: white;
       cursor: pointer;
       font-size: 1rem;
       padding: 0;

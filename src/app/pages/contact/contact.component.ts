@@ -126,7 +126,8 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
   styles: [`
     .contact-page {
       min-height: 100vh;
-      background: #f9fafb;
+      background: var(--bg-secondary);
+      transition: background-color 0.3s ease;
     }
 
     .page-header {
@@ -200,8 +201,8 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
     }
 
     .method-icon {
-      background: #dbeafe;
-      color: #2563eb;
+      background: var(--accent-blue);
+      color: white;
       width: 48px;
       height: 48px;
       border-radius: 12px;
@@ -214,12 +215,12 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
     .method-info h3 {
       font-size: 1.1rem;
       font-weight: bold;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 0.5rem 0;
     }
 
     .method-info p {
-      color: #6b7280;
+      color: var(--text-secondary);
       margin: 0;
       line-height: 1.5;
     }
@@ -227,7 +228,7 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
     .social-section h3 {
       font-size: 1.2rem;
       font-weight: bold;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 1rem 0;
     }
 
@@ -237,8 +238,8 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
     }
 
     .social-link {
-      background: #dbeafe;
-      color: #2563eb;
+      background: var(--accent-blue);
+      color: white;
       width: 48px;
       height: 48px;
       border-radius: 12px;
@@ -250,8 +251,7 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
     }
 
     .social-link:hover {
-      background: #2563eb;
-      color: white;
+      background: var(--accent-blue-hover);
       transform: translateY(-2px);
     }
 
@@ -261,13 +261,13 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
     }
 
     .map-section {
-      background: white;
+      background: var(--bg-primary);
       margin-top: 2rem;
     }
 
     .map-placeholder {
       height: 300px;
-      background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--border-primary));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -276,12 +276,12 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
 
     .map-content {
       text-align: center;
-      color: #6b7280;
+      color: var(--text-secondary);
     }
 
     .map-content h3 {
       font-size: 1.5rem;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 0.5rem 0;
     }
 
@@ -290,7 +290,7 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
     }
 
     .map-icon {
-      color: #2563eb;
+      color: var(--accent-blue);
     }
 
     @media (max-width: 1024px) {

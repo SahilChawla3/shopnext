@@ -67,7 +67,8 @@ import { ProductCardComponent } from '../../components/product-card/product-card
   styles: [`
     .products-page {
       min-height: 100vh;
-      background: #f9fafb;
+      background: var(--bg-secondary);
+      transition: background-color 0.3s ease;
     }
 
     .page-header {
@@ -119,10 +120,10 @@ import { ProductCardComponent } from '../../components/product-card/product-card
     }
 
     .products-section {
-      background: white;
+      background: var(--bg-primary);
       border-radius: 16px;
       padding: 2rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 6px var(--shadow-light);
     }
 
     .products-header {
@@ -137,12 +138,12 @@ import { ProductCardComponent } from '../../components/product-card/product-card
     .products-header h2 {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0;
     }
 
     .results-count {
-      color: #6b7280;
+      color: var(--text-secondary);
       font-size: 0.9rem;
     }
 
@@ -158,18 +159,18 @@ import { ProductCardComponent } from '../../components/product-card/product-card
     }
 
     .no-products-icon {
-      color: #9ca3af;
+      color: var(--text-tertiary);
       margin-bottom: 1rem;
     }
 
     .no-products h3 {
       font-size: 1.5rem;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 1rem 0;
     }
 
     .no-products p {
-      color: #6b7280;
+      color: var(--text-secondary);
       margin: 0;
       max-width: 400px;
       margin-left: auto;

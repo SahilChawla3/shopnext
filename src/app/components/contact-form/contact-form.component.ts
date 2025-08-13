@@ -148,9 +148,9 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
     .contact-form-container {
       max-width: 600px;
       margin: 0 auto;
-      background: white;
+      background: var(--bg-primary);
       border-radius: 16px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px var(--shadow-light);
       overflow: hidden;
     }
 
@@ -189,7 +189,7 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
     .form-label {
       display: block;
       font-weight: 600;
-      color: #374151;
+      color: var(--text-primary);
       margin-bottom: 0.5rem;
     }
 
@@ -198,9 +198,11 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
     .form-textarea {
       width: 100%;
       padding: 0.75rem;
-      border: 2px solid #e5e7eb;
+      border: 2px solid var(--border-primary);
       border-radius: 8px;
       font-size: 1rem;
+      background: var(--bg-primary);
+      color: var(--text-primary);
       transition: all 0.3s ease;
       box-sizing: border-box;
     }
@@ -209,14 +211,14 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
     .form-select:focus,
     .form-textarea:focus {
       outline: none;
-      border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
     }
 
     .form-input.error,
     .form-select.error,
     .form-textarea.error {
-      border-color: #dc2626;
+      border-color: var(--error);
     }
 
     .form-textarea {
@@ -229,7 +231,7 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
       align-items: flex-start;
       cursor: pointer;
       font-size: 0.9rem;
-      color: #6b7280;
+      color: var(--text-secondary);
       gap: 0.5rem;
     }
 
@@ -238,7 +240,7 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
     }
 
     .error-message {
-      color: #dc2626;
+      color: var(--error);
       font-size: 0.875rem;
       margin-top: 0.25rem;
     }
@@ -249,7 +251,7 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
       justify-content: flex-end;
       margin-top: 2rem;
       padding-top: 2rem;
-      border-top: 1px solid #e5e7eb;
+      border-top: 1px solid var(--border-primary);
     }
 
     .btn {
@@ -272,21 +274,21 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
     }
 
     .btn-primary {
-      background: #2563eb;
+      background: var(--accent-blue);
       color: white;
     }
 
     .btn-primary:hover:not(:disabled) {
-      background: #1d4ed8;
+      background: var(--accent-blue-hover);
     }
 
     .btn-secondary {
-      background: #f3f4f6;
-      color: #374151;
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
     }
 
     .btn-secondary:hover {
-      background: #e5e7eb;
+      background: var(--border-primary);
     }
 
     .spinner {
@@ -313,15 +315,15 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
     }
 
     .submit-message.success {
-      background: #d1fae5;
-      color: #065f46;
-      border: 1px solid #10b981;
+      background: rgba(16, 185, 129, 0.1);
+      color: var(--success);
+      border: 1px solid var(--success);
     }
 
     .submit-message.error {
-      background: #fee2e2;
-      color: #991b1b;
-      border: 1px solid #dc2626;
+      background: rgba(239, 68, 68, 0.1);
+      color: var(--error);
+      border: 1px solid var(--error);
     }
 
     @media (max-width: 768px) {

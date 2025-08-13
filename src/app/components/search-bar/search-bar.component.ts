@@ -50,17 +50,18 @@ import { ProductService } from '../../services/product.service';
     .search-input {
       width: 100%;
       padding: 0.75rem 3rem 0.75rem 2.5rem;
-      border: 2px solid #e5e7eb;
+      border: 2px solid var(--border-primary);
       border-radius: 50px;
       font-size: 1rem;
-      background: white;
+      background: var(--bg-primary);
+      color: var(--text-primary);
       transition: all 0.3s ease;
     }
 
     .search-input:focus {
       outline: none;
-      border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
     }
 
     .search-icon {
@@ -68,7 +69,7 @@ import { ProductService } from '../../services/product.service';
       left: 0.75rem;
       top: 50%;
       transform: translateY(-50%);
-      color: #6b7280;
+      color: var(--text-secondary);
       pointer-events: none;
     }
 
@@ -80,7 +81,7 @@ import { ProductService } from '../../services/product.service';
       background: none;
       border: none;
       font-size: 1.5rem;
-      color: #6b7280;
+      color: var(--text-secondary);
       cursor: pointer;
       padding: 0;
       width: 24px;
@@ -93,14 +94,14 @@ import { ProductService } from '../../services/product.service';
     }
 
     .clear-search:hover {
-      background: #f3f4f6;
-      color: #374151;
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
     }
 
     .search-info {
       margin-top: 0.5rem;
       font-size: 0.9rem;
-      color: #6b7280;
+      color: var(--text-secondary);
     }
 
     @media (max-width: 768px) {

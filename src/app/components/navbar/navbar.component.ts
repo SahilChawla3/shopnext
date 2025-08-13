@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ThemeToggleComponent],
   template: `
     <nav class="navbar">
       <div class="nav-container">
@@ -26,6 +27,9 @@ import { RouterModule } from '@angular/router';
             <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a>
           </li>
         </ul>
+        <div class="nav-actions">
+          <app-theme-toggle></app-theme-toggle>
+        </div>
         <div class="nav-hamburger" (click)="toggleMenu()">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -51,6 +55,13 @@ import { RouterModule } from '@angular/router';
       justify-content: space-between;
       align-items: center;
       height: 4rem;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right: 1rem;
     }
 
     .logo-text {
@@ -111,6 +122,10 @@ import { RouterModule } from '@angular/router';
     }
 
     @media (max-width: 768px) {
+      .nav-actions {
+        margin-right: 0.5rem;
+      }
+
       .nav-menu {
         position: fixed;
         left: -100%;

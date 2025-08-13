@@ -93,9 +93,10 @@ import { RouterModule } from '@angular/router';
   `,
   styles: [`
     .footer {
-      background: #1f2937;
+      background: var(--bg-secondary);
       color: white;
       margin-top: auto;
+      transition: background-color 0.3s ease;
     }
 
     .footer-container {
@@ -119,12 +120,12 @@ import { RouterModule } from '@angular/router';
     .footer-title {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #2563eb;
+      color: var(--accent-blue);
       margin: 0 0 1rem 0;
     }
 
     .footer-description {
-      color: #d1d5db;
+      color: var(--text-secondary);
       line-height: 1.6;
       margin: 0 0 1.5rem 0;
     }
@@ -135,12 +136,12 @@ import { RouterModule } from '@angular/router';
     }
 
     .social-link {
-      color: #d1d5db;
+      color: var(--text-secondary);
       transition: color 0.3s ease;
     }
 
     .social-link:hover {
-      color: #2563eb;
+      color: var(--accent-blue);
     }
 
     .section-title {
@@ -161,17 +162,17 @@ import { RouterModule } from '@angular/router';
     }
 
     .footer-link {
-      color: #d1d5db;
+      color: var(--text-secondary);
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     .footer-link:hover {
-      color: white;
+      color: var(--text-primary);
     }
 
     .newsletter-text {
-      color: #d1d5db;
+      color: var(--text-secondary);
       margin: 0 0 1rem 0;
       font-size: 0.9rem;
     }
@@ -184,8 +185,8 @@ import { RouterModule } from '@angular/router';
 
     .newsletter-input {
       padding: 0.75rem;
-      border: 1px solid #374151;
-      background: #374151;
+      border: 1px solid var(--border-primary);
+      background: var(--bg-tertiary);
       color: white;
       border-radius: 6px;
       font-size: 0.9rem;
@@ -193,16 +194,16 @@ import { RouterModule } from '@angular/router';
 
     .newsletter-input:focus {
       outline: none;
-      border-color: #2563eb;
+      border-color: var(--accent-blue);
     }
 
     .newsletter-input::placeholder {
-      color: #9ca3af;
+      color: var(--text-tertiary);
     }
 
     .newsletter-btn {
       padding: 0.75rem 1rem;
-      background: #2563eb;
+      background: var(--accent-blue);
       color: white;
       border: none;
       border-radius: 6px;
@@ -212,11 +213,11 @@ import { RouterModule } from '@angular/router';
     }
 
     .newsletter-btn:hover {
-      background: #1d4ed8;
+      background: var(--accent-blue-hover);
     }
 
     .footer-bottom {
-      border-top: 1px solid #374151;
+      border-top: 1px solid var(--border-primary);
       padding: 1.5rem 0;
     }
 
@@ -230,7 +231,7 @@ import { RouterModule } from '@angular/router';
 
     .footer-bottom-content p {
       margin: 0;
-      color: #d1d5db;
+      color: var(--text-secondary);
       font-size: 0.9rem;
     }
 

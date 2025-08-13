@@ -171,6 +171,8 @@ import { CommonModule } from '@angular/common';
   styles: [`
     .about-page {
       min-height: 100vh;
+      background: var(--bg-secondary);
+      transition: background-color 0.3s ease;
     }
 
     .hero-section {
@@ -226,12 +228,12 @@ import { CommonModule } from '@angular/common';
     .text-content h2 {
       font-size: 2.5rem;
       font-weight: bold;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 2rem 0;
     }
 
     .text-content p {
-      color: #6b7280;
+      color: var(--text-secondary);
       line-height: 1.7;
       margin-bottom: 1.5rem;
       font-size: 1.1rem;
@@ -248,7 +250,7 @@ import { CommonModule } from '@angular/common';
     .mission-section,
     .team-section {
       padding: 4rem 0;
-      background: #f9fafb;
+      background: var(--bg-secondary);
     }
 
     .section-header {
@@ -259,13 +261,13 @@ import { CommonModule } from '@angular/common';
     .section-header h2 {
       font-size: 2.5rem;
       font-weight: bold;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 1rem 0;
     }
 
     .section-header p {
       font-size: 1.1rem;
-      color: #6b7280;
+      color: var(--text-secondary);
       margin: 0;
     }
 
@@ -276,11 +278,11 @@ import { CommonModule } from '@angular/common';
     }
 
     .mission-card {
-      background: white;
+      background: var(--bg-primary);
       padding: 2.5rem;
       border-radius: 16px;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px var(--shadow-light);
       transition: transform 0.3s ease;
     }
 
@@ -289,19 +291,19 @@ import { CommonModule } from '@angular/common';
     }
 
     .mission-icon {
-      color: #2563eb;
+      color: var(--accent-blue);
       margin-bottom: 1.5rem;
     }
 
     .mission-card h3 {
       font-size: 1.3rem;
       font-weight: bold;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 1rem 0;
     }
 
     .mission-card p {
-      color: #6b7280;
+      color: var(--text-secondary);
       line-height: 1.6;
       margin: 0;
     }
@@ -315,7 +317,7 @@ import { CommonModule } from '@angular/common';
     .value-item h4 {
       font-size: 1.2rem;
       font-weight: bold;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 0.5rem 0;
     }
 
@@ -330,10 +332,10 @@ import { CommonModule } from '@angular/common';
     }
 
     .team-member {
-      background: white;
+      background: var(--bg-primary);
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px var(--shadow-light);
       transition: transform 0.3s ease;
     }
 
@@ -354,18 +356,18 @@ import { CommonModule } from '@angular/common';
     .member-info h3 {
       font-size: 1.3rem;
       font-weight: bold;
-      color: #1f2937;
+      color: var(--text-primary);
       margin: 0 0 0.5rem 0;
     }
 
     .role {
-      color: #2563eb;
+      color: var(--accent-blue);
       font-weight: 600;
       margin: 0 0 1rem 0;
     }
 
     .bio {
-      color: #6b7280;
+      color: var(--text-secondary);
       line-height: 1.6;
       margin: 0;
     }
@@ -407,12 +409,12 @@ import { CommonModule } from '@angular/common';
     }
 
     .btn-primary {
-      background: #2563eb;
+      background: var(--accent-blue);
       color: white;
     }
 
     .btn-primary:hover {
-      background: #1d4ed8;
+      background: var(--accent-blue-hover);
     }
 
     .btn-secondary {
@@ -423,7 +425,7 @@ import { CommonModule } from '@angular/common';
 
     .btn-secondary:hover {
       background: white;
-      color: #1f2937;
+      color: var(--text-primary);
     }
 
     @media (max-width: 1024px) {

@@ -93,7 +93,7 @@ import { RouterModule } from '@angular/router';
   `,
   styles: [`
     .footer {
-      background: var(--bg-secondary);
+      // background: var(--bg-secondary);
       color: white;
       margin-top: auto;
       transition: background-color 0.3s ease;

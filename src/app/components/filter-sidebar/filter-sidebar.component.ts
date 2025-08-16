@@ -78,7 +78,7 @@ import { FilterOptions } from '../../models/product.model';
             {{ filters.category | titlecase }}
             <button (click)="removeFilter('category')" class="remove-filter">×</button>
           </span>
-          <span *ngIf="filters.minPrice > 0 || filters.maxPrice < 10000" class="filter-tag">
+          <span *ngIf="filters.minPrice > 0 || filters.maxPrice < 1000" class="filter-tag">
             $ {{ filters.minPrice }} - $ {{ filters.maxPrice }}
             <button (click)="removeFilter('price')" class="remove-filter">×</button>
           </span>
@@ -166,6 +166,7 @@ import { FilterOptions } from '../../models/product.model';
       background: var(--bg-primary);
       color: var(--text-primary);
       font-size: 0.9rem;
+      width: 40px;
     }
 
     .price-input:focus {
@@ -247,6 +248,7 @@ import { FilterOptions } from '../../models/product.model';
     }
   `]
 })
+
 export class FilterSidebarComponent implements OnInit, OnDestroy {
   filters: FilterOptions = {
     category: '',
@@ -261,10 +263,18 @@ export class FilterSidebarComponent implements OnInit, OnDestroy {
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
+    // Load categories
     this.productService.getCategories()
       .pipe(takeUntil(this.destroy$))
       .subscribe(categories => {
         this.categories = categories;
+      });
+
+    // Load saved filters from service
+    this.productService.filters$
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(savedFilters => {
+        this.filters = { ...savedFilters }; // keep service state in sync
       });
   }
 
@@ -278,13 +288,14 @@ export class FilterSidebarComponent implements OnInit, OnDestroy {
   }
 
   clearFilters(): void {
-    this.filters = {
+    const defaultFilters: FilterOptions = {
       category: '',
       minPrice: 0,
       maxPrice: 1000,
       inStock: false
     };
-    this.applyFilters();
+    this.filters = { ...defaultFilters };
+    this.productService.setFilters(this.filters);
   }
 
   removeFilter(filterType: string): void {
@@ -300,7 +311,7 @@ export class FilterSidebarComponent implements OnInit, OnDestroy {
         this.filters.inStock = false;
         break;
     }
-    this.applyFilters();
+    this.productService.setFilters(this.filters);
   }
 
   trackByCategory(index: number, category: string): string {

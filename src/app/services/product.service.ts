@@ -10,12 +10,12 @@ import { Product, FilterOptions } from '../models/product.model';
 export class ProductService {
   private products$ = new BehaviorSubject<Product[]>([]);
   private searchTerm$ = new BehaviorSubject<string>('');
-  private filters$ = new BehaviorSubject<FilterOptions>({
-    category: '',
-    minPrice: 0,
-    maxPrice: 10000,
-    inStock: false
-  });
+
+  private readonly FILTERS_KEY = 'product_filters';
+
+  filters$ = new BehaviorSubject<FilterOptions>(
+    this.loadSavedFilters()
+  );
 
   constructor(private http: HttpClient) {
     this.loadProducts();
@@ -101,6 +101,18 @@ export class ProductService {
     this.products$.next(mockProducts);
   }
 
+  private loadSavedFilters(): FilterOptions {
+    const saved = localStorage.getItem(this.FILTERS_KEY);
+    return saved
+      ? JSON.parse(saved)
+      : {
+          category: '',
+          minPrice: 0,
+          maxPrice: 10000,
+          inStock: false
+        };
+  }
+
   getProducts(): Observable<Product[]> {
     return this.products$.asObservable();
   }
@@ -143,6 +155,22 @@ export class ProductService {
 
   setFilters(filters: FilterOptions): void {
     this.filters$.next(filters);
+    localStorage.setItem(this.FILTERS_KEY, JSON.stringify(filters));
+  }
+
+  getFilters(): FilterOptions {
+    return this.filters$.getValue();
+  }
+
+  resetFilters(): void {
+    const defaultFilters: FilterOptions = {
+      category: '',
+      minPrice: 0,
+      maxPrice: 10000,
+      inStock: false
+    };
+    this.filters$.next(defaultFilters);
+    localStorage.setItem(this.FILTERS_KEY, JSON.stringify(defaultFilters));
   }
 
   getCategories(): Observable<string[]> {

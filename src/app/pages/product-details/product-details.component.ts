@@ -143,6 +143,7 @@ import { FormsModule } from '@angular/forms';
       font-weight: 500;
       padding: 0.5rem 0;
       margin-bottom: 0.5rem;
+      margin-left: 0.5rem;
       transition: color 0.3s ease;
     }
 
@@ -153,6 +154,7 @@ import { FormsModule } from '@angular/forms';
     .breadcrumb-trail {
       color: var(--text-secondary);
       font-size: 0.9rem;
+      margin-left: 0.5rem;
     }
 
     .separator {

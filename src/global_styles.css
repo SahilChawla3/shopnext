@@ -114,10 +114,10 @@ button {
 }
 
 /* Accessibility */
-:focus {
+/* :focus {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
-}
+} */
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
